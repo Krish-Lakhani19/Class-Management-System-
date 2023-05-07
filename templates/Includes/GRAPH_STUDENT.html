@@ -1,0 +1,56 @@
+<script>
+
+$(document).ready(function() {
+
+	// Area chart
+	var options = {
+          series: [{{assignment_marks}}],
+          chart: {
+          width: 380,
+          type: 'pie',
+        },
+        labels: ['Assignment Marks'],
+        responsive: [{
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200
+            },
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }]
+        };
+
+        var chart = new ApexCharts(document.querySelector("#assignment_mark"), options);
+        chart.render();
+
+
+
+$(document).ready(function() {
+
+	// Area chart
+	var options = {
+          series: [{{exam_marks}}],
+          chart: {
+          width: 380,
+          type: 'pie',
+        },
+        labels: ['Exam Marks'],
+        responsive: [{
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200
+            },
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }]
+        };
+
+        var chart = new ApexCharts(document.querySelector("#exam_mark"), options);
+        chart.render();
+</script>

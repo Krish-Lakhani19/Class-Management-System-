@@ -1,0 +1,243 @@
+
+{% extends  'base.html' %}
+{% block content %}
+ <div class="page-header">
+                  <div class="column">
+                     <div class="col-lg-12">
+                        <ul class="breadcrumb">
+                           <li class="breadcrumb-item active">Dashboard</li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-xl-3 col-xl-6 col-12 d-flex">
+                     <div class="card bg-one w-100">
+                        <div class="card-body">
+                           <div class="db-widgets d-flex justify-content-center align-items-left">
+                              <div class="db-icon">
+                                 <i class="fas fa-user-graduate"></i>
+                              </div>
+                              <div class="db-info">
+                                 <h3>{{student_count}}</h3>
+                                 <h6>Students</h6>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-3 col-xl-6 col-12 d-flex">
+                     <div class="card bg-two w-100">
+                        <div class="card-body">
+                           <div class="db-widgets d-flex justify-content-center align-items-center align-card-left">
+                              <div class="db-icon">
+                                 <i class="fas fa-chalkboard"></i>
+                              </div>
+                              <div class="db-info">
+                                 <h3>{{staff_count}}</h3>
+                                 <h6>Staff</h6>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-3 col-xl-6 col-12 d-flex">
+                     <div class="card bg-three w-100">
+                        <div class="card-body">
+                           <div class="db-widgets d-flex justify-content-center align-items-center">
+                              <div class="db-icon">
+                                 <i class="fas fa-graduation-cap"></i>
+                              </div>
+                              <div class="db-info">
+                                 <h3>{{course_count}}</h3>
+                                 <h6>Course</h6>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               <div class="row">
+                  <div class="col-xl-12 col-xl-6">
+                     <div class="card card-chart">
+                        <div class="card-header">
+                           <div class="row align-items-center">
+                              <div class="col-6">
+                                 <h5 class="card-title">Overall Attendance</h5>
+                              </div>
+                              <div class="col-auto">
+                                 <ul class="list-inline-group text-right mb-0 pl-0">
+                                    <li class="list-inline-item">
+                                       <div class="form-group mb-0 amount-spent-select">
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="card-body">
+                           <div id="All_details"></div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-12 col-lg-6">
+                     <div class="card card-chart">
+                        <div class="card-header">
+                           <div class="row align-items-center">
+                              <div class="col-6">
+                                 <h5 class="card-title">Number of Students</h5>
+                              </div>
+                              <div class="col-6">
+                                 <ul class="list-inline-group text-right mb-0 pl-0">
+                                    <li class="list-inline-item">
+                                       <div class="form-group mb-0 amount-spent-select">
+                                          <select class="form-control form-control-sm">
+                                             <option>Today</option>
+                                             <option>Last Week</option>
+                                             <option>Last Month</option>
+                                          </select>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="card-body">
+                           <div id="stude_gender"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-lg-6 d-flex">
+                        <div class="card-header">
+                           <h5 class="card-title">Star Students</h5>
+                        </div>
+                        <div class="card-body">
+                           <div class="table-responsive">
+                              <table class="table table-hover table-left">
+                                 <thead class="thead-light">
+                                    <tr>
+                                       <th>ID</th>
+                                       <th>Name</th>
+                                       <th class="text-center">Marks</th>
+                                       <th class="text-center">Pointers</th>
+                                       <th class="text-center">Year</th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    <tr>
+                                       <td class="text-nowrap">
+                                          <div>PRE2209</div>
+                                       </td>
+                                       <td class="text-nowrap">Ayush Kadam</td>
+                                       <td class="text-center">580/600</td>
+                                       <td class="text-center">10</td>
+                                       <td class="text-right">
+                                          <div>2019</div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td class="text-nowrap">
+                                          <div>PRE1245</div>
+                                       </td>
+                                       <td class="text-nowrap">Krish Lakhani</td>
+                                       <td class="text-center">500/600</td>
+                                       <td class="text-center">9.5</td>
+                                       <td class="text-right">
+                                          <div>2018</div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td class="text-nowrap">
+                                          <div>PRE1625</div>
+                                       </td>
+                                       <td class="text-nowrap">Deep Jethwa</td>
+                                       <td class="text-center">410/600</td>
+                                       <td class="text-center">9.1</td>
+                                       <td class="text-right">
+                                          <div>2017</div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td class="text-nowrap">
+                                          <div>PRE2516</div>
+                                       </td>
+                                       <td class="text-nowrap">Ishan Kanhirathingal</td>
+                                       <td class="text-center">380/600</td>
+                                       <td class="text-center">8.9</td>
+                                       <td class="text-right">
+                                          <div>2016</div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td class="text-nowrap">
+                                          <div>PRE2209</div>
+                                       </td>
+                                       <td class="text-nowrap">Viraj Kherde</td>
+                                       <td class="text-center">370/600</td>
+                                       <td class="text-center">8.6</td>
+                                       <td class="text-right">
+                                          <div>2015</div>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-6 d-flex">
+                        <div class="card-header">
+                           <h5 class="card-title">Student Activity</h5>
+                        </div>
+                        <div class="card-body">
+                           <ul class="activity-feed">
+                              <li class="feed-item">
+                                 <div class="feed-date">Apr 13</div>
+                                 <span class="feed-text"><a>Shubham Gohil</a> won 1st place in <a>"Chess"</a></span>
+                              </li>
+                              <li class="feed-item">
+                                 <div class="feed-date">Mar 21</div>
+                                 <span class="feed-text"><a>Akhlad Kaifi</a> won the <a href="invoice.html">"Hackthon"</a></span>
+                              </li>
+                              <li class="feed-item">
+                                 <div class="feed-date">Feb 2</div>
+                                 <span class="feed-text"><a> Vishank Mishra</a> attended international conference in <a href="profile.html">"IIT Bombay"</a></span>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-lg-3 col-lg-6 col-12">
+                     <div class="card flex-fill fb sm-box">
+                        <i class="fab fa-facebook"></i>
+                        <h6>10,892</h6>
+                        <p>Likes</p>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-lg-6 col-12">
+                     <div class="card flex-fill twitter sm-box">
+                        <i class="fab fa-twitter"></i>
+                        <h6>48,596</h6>
+                        <p>Follows</p>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-lg-6 col-12">
+                     <div class="card flex-fill insta sm-box">
+                        <i class="fab fa-instagram"></i>
+                        <h6>2,026</h6>
+                        <p>Follows</p>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-lg-6 col-12">
+                     <div class="card flex-fill linkedin sm-box">
+                        <i class="fab fa-linkedin-in"></i>
+                        <h6>1,886</h6>
+                        <p>Follows</p>
+                     </div>
+                  </div>
+
+{% include 'includes/chart.html' %}
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="page-header">
+                  <div class="column">
+                     <div class="col-lg-12">
+                        <ul class="breadcrumb">
+                           <li class="breadcrumb-item active">Dashboard</li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-xl-3 col-xl-6 col-12 d-flex">
+                     <div class="card bg-one w-100">
+                        <div class="card-body">
+                           <div class="db-widgets d-flex justify-content-center align-items-left">
+                              <div class="db-icon">
+                                 <i class="fas fa-book-open"></i>
+                              </div>
+                              <div class="db-info">
+                                 <h3>{{assignment_marks}}</h3>
+                                 <h6>Assignment Marks</h6>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-3 col-xl-6 col-12 d-flex">
+                     <div class="card bg-two w-100">
+                        <div class="card-body">
+                           <div class="db-widgets d-flex justify-content-center align-items-center align-card-left">
+                              <div class="db-icon">
+                                 <i class="fas fa-user-graduate"></i>
+                              </div>
+                              <div class="db-info">
+                                 <h3>{{exam_marks}}</h3>
+                                 <h6>Exam Marks</h6>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+<div class="col-xl-3 col-xl-6 col-12 d-flex">
+                     <div class="card bg-three w-100">
+                        <div class="card-body">
+                           <div class="db-widgets d-flex justify-content-center align-items-center">
+                              <div class="db-icon">
+                                 <i class="fas fa-graduation-cap"></i>
+                              </div>
+                              <div class="db-info">
+                                 <h3>{{result_count}}</h3>
+                                 <h6>Result</h6>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+{% include 'includes/GRAPH_STUDENT.html' %}
+{% endblock %}
